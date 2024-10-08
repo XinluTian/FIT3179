@@ -1,0 +1,108 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Australian Tourism Data - Enhanced",
+  "width": 600,
+  "height": 400,
+  "projection": {
+    "type": "mercator"
+  },
+  "params": [
+    {
+      "name": "Year_Start",
+      "value": 1998,
+      "bind": {
+        "input": "range",
+        "min": 1998,
+        "max": 2016,
+        "step": 1,
+        "name": "Year Selection:"
+      }
+    },
+    {
+      "name": "Purpose_Selection",
+      "value": "Business",
+      "bind": {
+        "input": "select",
+        "options": ["Business", "Holiday","Other"],
+        "name": "Tourism Purpose:"
+      }
+    }
+  ],
+  "layer": [
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/olu-git/assgn2/main/js/australia_topo.geo.json",
+        "format": {
+          "type": "topojson",
+          "feature": "STE11aAust"
+        }
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": "lightgray",
+        "stroke": "white"
+      },
+      "encoding": {
+        "tooltip": {
+          "field": "properties.STATE_NAME",
+          "type": "nominal",
+          "title": "State"
+        }
+      }
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/XinluTian/FIT3179/refs/heads/main/data/updated_tourism_data_with_coordinates.csv"
+      },
+      "transform": [
+        {
+          "filter": "datum.Year >= Year_Start"
+        },
+        {
+          "filter": "datum.Purpose == Purpose_Selection"
+        }
+      ],
+      "mark": {
+        "type": "circle",
+        "tooltip": true
+      },
+      "encoding": {
+        "longitude": {
+          "field": "lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "lat",
+          "type": "quantitative"
+        },
+        "size": {
+          "field": "Trips",
+          "type": "quantitative",
+          "scale": {
+            "domain": [0, 300]
+          },
+          "legend": {
+            "title": "Number of Trips"
+          }
+        },
+        "color": {
+          "field": "Purpose",
+          "type": "nominal",
+          "scale": {
+            "domain": ["Business", "Holiday",  "Other"],
+            "range": ["#1f77b4", "#ff7f0e", "#d62728"]
+          },
+          "legend": {
+            "title": "Tourism Purpose"
+          }
+        },
+        "tooltip": [
+          {"field": "City", "type": "nominal", "title": "City"},
+          {"field": "Year", "type": "quantitative", "title": "Year"},
+          {"field": "Purpose", "type": "nominal", "title": "Purpose"},
+          {"field": "Trips", "type": "quantitative", "title": "Number of Trips"}
+        ]
+      }
+    }
+  ]
+}
