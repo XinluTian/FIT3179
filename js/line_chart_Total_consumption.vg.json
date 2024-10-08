@@ -1,0 +1,162 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "Average Total Consumption by State Over Time",
+    "data": {
+        "url": "https://raw.githubusercontent.com/XinluTian/FIT3179/refs/heads/main/data/Processed_Tourism_Data.csv"
+    },
+    "vconcat": [
+        {
+            "width": "container",
+            "height": 400,
+            "encoding": {
+                "x": {
+                    "field": "Year",
+                    "timeUnit": "year",
+                    "title": "Year"
+                },
+                "y": {
+                    "title": "Consumption",
+                    "field": "Consumption",
+                    "type": "quantitative",
+                    "format": "$,"
+                },
+                "color": {
+                    "condition": {
+                        "param": "brush",
+                        "title": "State",
+                        "field": "State",
+                        "type": "nominal",
+                        "scale": {
+                            "domain": [
+                                "NSW",
+                                "Vic",
+                                "Qld",
+                                "SA",
+                                "WA",
+                                "Tas",
+                                "NT",
+                                "ACT"
+                            ],
+                            "range": [
+                                "#6f1926",
+                                "#de324c",
+                                "#f4895f",
+                                "#f8e16f",
+                                "#95cf92",
+                                "#369acc",
+                                "#9656a2",
+                                "#cbabd1"
+                            ]
+                        }
+                    },
+                    "value": "gray"
+                },
+                "opacity": {
+                    "condition": {
+                        "param": "brush",
+                        "value": 1
+                    },
+                    "value": 0.3
+                }
+            },
+            "layer": [
+                {
+                    "params": [
+                        {
+                            "name": "brush",
+                            "select": {
+                                "type": "interval",
+                                "encodings": [
+                                    "x"
+                                ]
+                            }
+                        }
+                    ],
+                    "transform": [
+                        {
+                            "filter": {
+                                "param": "click"
+                            }
+                        }
+                    ],
+                    "mark": {
+                        "type": "line",
+                        "point": true,
+                        "tooltip": true,
+                        "strokeWidth": 7,
+                        "stroke": "transparent"
+                    }
+                },
+                {
+                    "mark": "line"
+                }
+            ]
+        },
+        {
+            "encoding": {
+                "color": {
+                    "condition": {
+                        "param": "click",
+                        "field": "State",
+                        "scale": {
+                            "range": [
+                                "#6f1926",
+                                "#de324c",
+                                "#f4895f",
+                                "#f8e16f",
+                                "#95cf92",
+                                "#369acc",
+                                "#9656a2",
+                                "#cbabd1"
+                            ]
+                        }
+                    },
+                    "value": "gray"
+                },
+                "x": {
+                    "aggregate": "average",
+                    "field": "Consumption",
+                    "title": "Consumption",
+                    "format": "$,.0f"
+                },
+                "y": {
+                    "title": "State",
+                    "field": "State",
+                    "type": "nominal"
+                }
+            },
+            "width": "container",
+            "mark": {
+                "type": "bar",
+                "tooltip": true
+            },
+            "params": [
+                {
+                    "name": "click",
+                    "select": {
+                        "type": "interval",
+                        "encodings": [
+                            "color"
+                        ]
+                    }
+                }
+            ],
+            "transform": [
+                {
+                    "filter": {
+                        "param": "brush"
+                    }
+                }
+            ]
+        }
+    ],
+    "config": {
+      "title": {
+        "font": "Roboto Condensed",
+        "fontSize": 14,
+        "anchor": "middle", 
+        "align": "center"    
+      },
+      "numberFormat": "$,.2s"
+  }
+}
