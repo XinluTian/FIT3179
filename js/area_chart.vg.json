@@ -1,0 +1,93 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "Total Tourists Coming to Australia (1991-2023)",
+    "width": 500,
+    "height": 350,
+    "padding": 20,  
+    "data": {
+      "url": "https://raw.githubusercontent.com/XinluTian/FIT3179/refs/heads/main/data/total.csv",  
+      "format": {
+        "type": "csv",
+        "parse": {
+            "Year": "utc:'%Y'"  
+        }
+      }
+    },
+    "layer": [
+      {
+        "mark": {
+          "type": "area",
+          "color": "orange"
+        },
+        "encoding": {
+            "x": {
+                "field": "Year",
+                "type": "temporal",
+                "title": "Year",
+                "timeUnit": "year",
+                "scale": {
+                    "domain": ["1991-01-01T00:00:00", "2023-01-01T00:00:00"]  
+                }
+            },
+          "y": {
+            "field": "Total",  
+            "type": "quantitative",
+            "title": "Total Tourists"
+          },
+          "tooltip": [
+            {
+              "field": "Year",
+              "type": "temporal",
+              "timeUnit": "year",  
+              "title": "Year"
+            },
+            {
+              "field": "Total",
+              "type": "quantitative",
+              "title": "Total Tourists",
+              "format": ",.0f"  
+            }
+          ]
+        }
+      },
+      {
+        "mark": "rule",
+        "encoding": {
+          "x": {
+            "datum": {"year": 2019, "month": 1, "date": 1},  
+            "type": "temporal"
+          },
+          "color": {
+            "value": "red"
+          },
+          "size": {
+            "value": 2
+          }
+        }
+      },
+      {
+        "mark": {
+          "type": "text",
+          "align": "left",
+          "dx": 5,  
+          "dy": -20,  
+          "color": "red",
+          "fontSize": 12,
+          "fontWeight": "bold"
+        },
+        "encoding": {
+          "x": {
+            "datum": {"year": 2019, "month": 1, "date": 1},  
+            "type": "temporal"
+          },
+          "y": {
+            "datum": 18000000  
+          },
+          "text": {
+            "value": "2019: COVID-19 Impact on Tourism"
+          }
+        }
+      }
+    ]
+  }
+  
