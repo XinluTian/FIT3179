@@ -32,39 +32,39 @@ TIME,LOCATION,Value
 2021,New Zealand,174160
 2022,New Zealand,980840
 2023,New Zealand,379830
-1991,PNG,14970
-1992,PNG,17040
-1993,PNG,19050
-1994,PNG,21220
-1995,PNG,22310
-1996,PNG,23850
-1997,PNG,25390
-1998,PNG,24860
-1999,PNG,25700
-2000,PNG,23030
-2001,PNG,21260
-2002,PNG,16940
-2003,PNG,15310
-2004,PNG,15230
-2005,PNG,15820
-2006,PNG,19560
-2007,PNG,23300
-2008,PNG,28500
-2009,PNG,32720
-2010,PNG,36140
-2011,PNG,36950
-2012,PNG,44260
-2013,PNG,42940
-2014,PNG,42370
-2015,PNG,42750
-2016,PNG,40900
-2017,PNG,40990
-2018,PNG,38350
-2019,PNG,41860
-2020,PNG,8660
-2021,PNG,950
-2022,PNG,18230
-2023,PNG,7530
+1991,Papua New Guinea,14970
+1992,Papua New Guinea,17040
+1993,Papua New Guinea,19050
+1994,Papua New Guinea,21220
+1995,Papua New Guinea,22310
+1996,Papua New Guinea,23850
+1997,Papua New Guinea,25390
+1998,Papua New Guinea,24860
+1999,Papua New Guinea,25700
+2000,Papua New Guinea,23030
+2001,Papua New Guinea,21260
+2002,Papua New Guinea,16940
+2003,Papua New Guinea,15310
+2004,Papua New Guinea,15230
+2005,Papua New Guinea,15820
+2006,Papua New Guinea,19560
+2007,Papua New Guinea,23300
+2008,Papua New Guinea,28500
+2009,Papua New Guinea,32720
+2010,Papua New Guinea,36140
+2011,Papua New Guinea,36950
+2012,Papua New Guinea,44260
+2013,Papua New Guinea,42940
+2014,Papua New Guinea,42370
+2015,Papua New Guinea,42750
+2016,Papua New Guinea,40900
+2017,Papua New Guinea,40990
+2018,Papua New Guinea,38350
+2019,Papua New Guinea,41860
+2020,Papua New Guinea,8660
+2021,Papua New Guinea,950
+2022,Papua New Guinea,18230
+2023,Papua New Guinea,7530
 1991,Solomon Islands,2060
 1992,Solomon Islands,1970
 1993,Solomon Islands,2190
@@ -2738,39 +2738,39 @@ TIME,LOCATION,Value
 2021,Syria,520
 2022,Syria,3380
 2023,Syria,680
-1991,T眉rkiye,5810
-1992,T眉rkiye,4590
-1993,T眉rkiye,4090
-1994,T眉rkiye,3890
-1995,T眉rkiye,4760
-1996,T眉rkiye,4460
-1997,T眉rkiye,4710
-1998,T眉rkiye,4260
-1999,T眉rkiye,4740
-2000,T眉rkiye,5600
-2001,T眉rkiye,4680
-2002,T眉rkiye,4810
-2003,T眉rkiye,4820
-2004,T眉rkiye,5530
-2005,T眉rkiye,6060
-2006,T眉rkiye,6280
-2007,T眉rkiye,6520
-2008,T眉rkiye,7200
-2009,T眉rkiye,7640
-2010,T眉rkiye,8470
-2011,T眉rkiye,8230
-2012,T眉rkiye,8670
-2013,T眉rkiye,9580
-2014,T眉rkiye,9810
-2015,T眉rkiye,9840
-2016,T眉rkiye,10830
-2017,T眉rkiye,11610
-2018,T眉rkiye,11710
-2019,T眉rkiye,11600
-2020,T眉rkiye,2850
-2021,T眉rkiye,800
-2022,T眉rkiye,8570
-2023,T眉rkiye,2630
+1991,Turkey,5810
+1992,Turkey,4590
+1993,Turkey,4090
+1994,Turkey,3890
+1995,Turkey,4760
+1996,Turkey,4460
+1997,Turkey,4710
+1998,Turkey,4260
+1999,Turkey,4740
+2000,Turkey,5600
+2001,Turkey,4680
+2002,Turkey,4810
+2003,Turkey,4820
+2004,Turkey,5530
+2005,Turkey,6060
+2006,Turkey,6280
+2007,Turkey,6520
+2008,Turkey,7200
+2009,Turkey,7640
+2010,Turkey,8470
+2011,Turkey,8230
+2012,Turkey,8670
+2013,Turkey,9580
+2014,Turkey,9810
+2015,Turkey,9840
+2016,Turkey,10830
+2017,Turkey,11610
+2018,Turkey,11710
+2019,Turkey,11600
+2020,Turkey,2850
+2021,Turkey,800
+2022,Turkey,8570
+2023,Turkey,2630
 1991,Unit Arab Emir,160
 1992,Unit Arab Emir,180
 1993,Unit Arab Emir,280
@@ -3398,72 +3398,72 @@ TIME,LOCATION,Value
 2021,Japan,3510
 2022,Japan,101740
 2023,Japan,69240
-1991,"Korea, North",740
-1992,"Korea, North",780
-1993,"Korea, North",720
-1994,"Korea, North",670
-1995,"Korea, North",670
-1996,"Korea, North",710
-1997,"Korea, North",610
-1998,"Korea, North",470
-1999,"Korea, North",840
-2000,"Korea, North",3370
-2001,"Korea, North",2280
-2002,"Korea, North",1490
-2003,"Korea, North",780
-2004,"Korea, North",360
-2005,"Korea, North",210
-2006,"Korea, North",140
-2007,"Korea, North",180
-2008,"Korea, North",50
-2009,"Korea, North",20
-2010,"Korea, North",30
-2011,"Korea, North",0
-2012,"Korea, North",10
-2013,"Korea, North",20
-2014,"Korea, North",20
-2015,"Korea, North",70
-2016,"Korea, North",30
-2017,"Korea, North",0
-2018,"Korea, North",0
-2019,"Korea, North",0
-2020,"Korea, North",0
-2021,"Korea, North",0
-2022,"Korea, North",0
-2023,"Korea, North",0
-1991,"Korea, South",32690
-1992,"Korea, South",44190
-1993,"Korea, South",73720
-1994,"Korea, South",122060
-1995,"Korea, South",181180
-1996,"Korea, South",243420
-1997,"Korea, South",250590
-1998,"Korea, South",76550
-1999,"Korea, South",120080
-2000,"Korea, South",168130
-2001,"Korea, South",190940
-2002,"Korea, South",208540
-2003,"Korea, South",225880
-2004,"Korea, South",234740
-2005,"Korea, South",277620
-2006,"Korea, South",292620
-2007,"Korea, South",287050
-2008,"Korea, South",255400
-2009,"Korea, South",219090
-2010,"Korea, South",251200
-2011,"Korea, South",235110
-2012,"Korea, South",236920
-2013,"Korea, South",236070
-2014,"Korea, South",240430
-2015,"Korea, South",257550
-2016,"Korea, South",302480
-2017,"Korea, South",340230
-2018,"Korea, South",347260
-2019,"Korea, South",355060
-2020,"Korea, South",70480
-2021,"Korea, South",4200
-2022,"Korea, South",101860
-2023,"Korea, South",76740
+1991,Dem. Rep. Korea,740
+1992,Dem. Rep. Korea,780
+1993,Dem. Rep. Korea,720
+1994,Dem. Rep. Korea,670
+1995,Dem. Rep. Korea,670
+1996,Dem. Rep. Korea,710
+1997,Dem. Rep. Korea,610
+1998,Dem. Rep. Korea,470
+1999,Dem. Rep. Korea,840
+2000,Dem. Rep. Korea,3370
+2001,Dem. Rep. Korea,2280
+2002,Dem. Rep. Korea,1490
+2003,Dem. Rep. Korea,780
+2004,Dem. Rep. Korea,360
+2005,Dem. Rep. Korea,210
+2006,Dem. Rep. Korea,140
+2007,Dem. Rep. Korea,180
+2008,Dem. Rep. Korea,50
+2009,Dem. Rep. Korea,20
+2010,Dem. Rep. Korea,30
+2011,Dem. Rep. Korea,0
+2012,Dem. Rep. Korea,10
+2013,Dem. Rep. Korea,20
+2014,Dem. Rep. Korea,20
+2015,Dem. Rep. Korea,70
+2016,Dem. Rep. Korea,30
+2017,Dem. Rep. Korea,0
+2018,Dem. Rep. Korea,0
+2019,Dem. Rep. Korea,0
+2020,Dem. Rep. Korea,0
+2021,Dem. Rep. Korea,0
+2022,Dem. Rep. Korea,0
+2023,Dem. Rep. Korea,0
+1991,Korea,32690
+1992,Korea,44190
+1993,Korea,73720
+1994,Korea,122060
+1995,Korea,181180
+1996,Korea,243420
+1997,Korea,250590
+1998,Korea,76550
+1999,Korea,120080
+2000,Korea,168130
+2001,Korea,190940
+2002,Korea,208540
+2003,Korea,225880
+2004,Korea,234740
+2005,Korea,277620
+2006,Korea,292620
+2007,Korea,287050
+2008,Korea,255400
+2009,Korea,219090
+2010,Korea,251200
+2011,Korea,235110
+2012,Korea,236920
+2013,Korea,236070
+2014,Korea,240430
+2015,Korea,257550
+2016,Korea,302480
+2017,Korea,340230
+2018,Korea,347260
+2019,Korea,355060
+2020,Korea,70480
+2021,Korea,4200
+2022,Korea,101860
+2023,Korea,76740
 1991,Bangladesh,1480
 1992,Bangladesh,1660
 1993,Bangladesh,1240
@@ -4058,37 +4058,37 @@ TIME,LOCATION,Value
 2021,Canada,4580
 2022,Canada,98660
 2023,Canada,51450
-1991,USA,285950
-1992,USA,277870
-1993,USA,296170
-1994,USA,307290
-1995,USA,328210
-1996,USA,389370
-1997,USA,374670
-1998,USA,392290
-1999,USA,429770
-2000,USA,488670
-2001,USA,456540
-2002,USA,441290
-2003,USA,433150
-2004,USA,445410
-2005,USA,459990
-2006,USA,471410
-2007,USA,478410
-2008,USA,480200
-2009,USA,503860
-2010,USA,504040
-2011,USA,494960
-2012,USA,518330
-2013,USA,536210
-2014,USA,568530
-2015,USA,604040
-2016,USA,671990
-2017,USA,713510
-2018,USA,779800
-2019,USA,834340
-2020,USA,195780
-2021,USA,14610
+1991,United States,285950
+1992,United States,277870
+1993,United States,296170
+1994,United States,307290
+1995,United States,328210
+1996,United States,389370
+1997,United States,374670
+1998,United States,392290
+1999,United States,429770
+2000,United States,488670
+2001,United States,456540
+2002,United States,441290
+2003,United States,433150
+2004,United States,445410
+2005,United States,459990
+2006,United States,471410
+2007,United States,478410
+2008,United States,480200
+2009,United States,503860
+2010,United States,504040
+2011,United States,494960
+2012,United States,518330
+2013,United States,536210
+2014,United States,568530
+2015,United States,604040
+2016,United States,671990
+2017,United States,713510
+2018,United States,779800
+2019,United States,834340
+2020,United States,195780
+2021,United States,14610
 2022,USA,317550
 2023,USA,178550
 1991,South America nfd,10
