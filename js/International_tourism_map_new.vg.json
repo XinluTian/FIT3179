@@ -1,40 +1,21 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Global House Indices",
-  "width": "container",
-  "height": 350,
+  "title": "International Tourist in Australia Over Time",
+  "width": 700,
+  "height": 500,
   "projection": {
     "type": "equirectangular"
   },
   "params": [
     {
       "name": "Year_selection",
-      "value": 2020,
+      "value": 2023,
       "bind": {
         "input": "range",
-        "min": 1970,
-        "max": 2020,
+        "min": 1991,
+        "max": 2023,
         "step": 1,
         "name": "Year:  "
-      }
-    },
-    {
-      "name": "Index_selection",
-      "bind": {
-        "input": "select",
-        "options": [
-          "REAL",
-          "RENT",
-          "PRICEINCOME",
-          "PRICERENT"
-        ],
-        "labels": [
-          "Real Prices",
-          "Rent Prices",
-          "Price to Income",
-          "Price to Rent"
-        ],
-        "name": "Index Type: "
       }
     }
   ],
@@ -67,7 +48,7 @@
     },
     {
       "data": {
-        "url": "https://raw.githubusercontent.com/olu-git/assgn2/main/data/world_data.csv"
+        "url": "https://raw.githubusercontent.com/XinluTian/FIT3179/refs/heads/main/data/reshaped_yearly_data.csv"
       },
       "transform": [
         {
@@ -86,9 +67,6 @@
         },
         {
           "filter": "datum.TIME == Year_selection"
-        },
-        {
-          "filter": "Index_selection == null || datum.SUBJECT == Index_selection"
         }
       ],
       "mark": {
@@ -105,14 +83,16 @@
           "field": "Value",
           "type": "quantitative",
           "scale": {
-            "domain": [
-              20,
-              180
-            ]
+            "domain": [1, 25, 50, 100, 250, 500, 1000,5000,10000,
+            20000,30000,40000,50000,60000,70000,80000,90000,100000,200000,300000,1000000],
+            "range": ["#faeee6", "#f6ddcd", "#f1cbb4", "#ecba9b", "#e8a982", "#e39869","#de8750","#d97537","#d5641e","#d05305","#bb4b05","#a64204","#923a04","#7d3203","#682a03","#532102","#3e1901","#2a1101","#150800","#000000"],
+            "nice": true
           },
           "legend": {
             "format": ".2s",
-            "title": "Index Value"
+            "title": "No. of Tourists",
+            "orient": "bottom-right", 
+            "direction": "horizontal"
           }
         },
         "tooltip": [
@@ -125,11 +105,6 @@
             "field": "TIME",
             "type": "quantitative",
             "title": "Year"
-          },
-          {
-            "field": "SUBJECT",
-            "type": "nominal",
-            "title": "Index Type"
           },
           {
             "field": "Value",
@@ -149,3 +124,4 @@
     }
   }
 }
+
