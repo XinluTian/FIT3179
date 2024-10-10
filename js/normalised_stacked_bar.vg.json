@@ -7,8 +7,8 @@
         "type": "json"
       }
     },
-    "width": 800,
-    "height": 600,
+    "width": "container",
+    "height": 350,
     "selection": {
       "IndustrySelection": {
         "type": "multi",

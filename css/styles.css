@@ -1,8 +1,127 @@
-#choropleth_map {
-	top:100px;
-	bottom: 100px; 
-	left: 100px;
+/* Set the dimensions and styling for the main page container */
+.page {
+	width: 1000px;
+	background-color: white;
+	margin: 0 auto; /* Center the page horizontally */
+	padding: 40px 0 0 0; /* Top padding only */
+}
+
+/* Modify title and subtitle font sizes */
+h1 {
+    text-align: center;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 45px; /* Increase title size */
+    margin-top: 500px; /* Add more space above the title */
+    margin-bottom: 50px; /* Add more space below the title */
+}
+
+p#c-align {
+    text-align: center;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 16px; /* Decrease subtitle size */
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Define consistent margin between grid sections */
+.pure-g {
+	margin-bottom: 20px;
+	display: flex; /* Use flexbox for better layout control */
+	justify-content: space-between;
+}
+
+.pure-u-2-3 {
+	width: 65%; /* Adjust chart width */
+}
+
+.pure-u-1-3 {
+	width: 30%; /* Adjust text description width */
+	padding-left: 20px; /* Add padding to separate text from chart */
+}
+
+/* Font settings */
+body,
+.pure-g [class*="pure-u"],
+.pure-g-r [class*="pure-u"] {
+	font-family: 'Roboto Condensed', sans-serif;
+}
+
+body {
+	font-family: 'Roboto Condensed', sans-serif;
+}
+
+/* Title and paragraph adjustments */
+.description h2, h1 {
+	margin-top: 0; /* Remove top margin for headings */
+}
+
+.description-right {
+	padding-left: 10px;
+	text-align: left;
+}
+
+#c-align {
+	text-align: center;
+}
+
+#r-align {
+	text-align: right;
+	border: 1px solid black;
+}
+
+/* Colored text */
+.orange_text {
+	color: #ff7b25;
+}
+
+/* Vega chart container */
+.vis-container {
+	width: 100%; /* Make container width responsive */
+}
+
+.vega-container {
+	max-width: 650px; /* Limit chart width */
+	margin-right: 20px; /* Ensure enough space between chart and text */
+	display: flex;
+	justify-content: center;
+}
+
+.vega-embed {
+	width: 100%;
+	max-width: 600px; /* Ensure chart doesn't exceed max width */
+}
+
+
+
+.note-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;  /* 定义两列布局 */
+    padding: 10px;
+}
+
+.note {
+	position: relative;
+    top: -550px;
 	right: 100px;
-	/*height: 1000px;
-	width: 800px;*/
+    grid-column: 10;  /* 将注释框放在第二列 */
+    background-color: white; 
+    padding: 10px 15px; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    font-family: 'Roboto Condensed', sans-serif; 
+    font-size: 16px; 
+}
+
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+	.pure-g {
+		flex-direction: column; /* Stack chart and text vertically */
+	}
+	.pure-u-2-3, .pure-u-1-3 {
+		width: 100%; /* Make containers full width on small screens */
+	}
+	.description-right {
+		padding-left: 0;
+	}
 }

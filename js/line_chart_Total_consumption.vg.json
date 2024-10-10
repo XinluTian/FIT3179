@@ -6,8 +6,8 @@
     },
     "vconcat": [
         {
-            "width": "container",
-            "height": 400,
+            "width": 800,
+            "height": 300,
             "encoding": {
                 "x": {
                     "field": "Year",
@@ -125,7 +125,7 @@
                     "type": "nominal"
                 }
             },
-            "width": "container",
+            "width": 800,
             "mark": {
                 "type": "bar",
                 "tooltip": true

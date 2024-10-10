@@ -1,8 +1,8 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "title": "Total Tourists Coming to Australia (1991-2023)",
-    "width": 500,
-    "height": 350,
+    "width": "container",
+    "height": 250,
     "padding": 20,  
     "data": {
       "url": "https://raw.githubusercontent.com/XinluTian/FIT3179/refs/heads/main/data/total.csv",  
@@ -84,7 +84,7 @@
             "datum": 18000000  
           },
           "text": {
-            "value": "2019: COVID-19 Impact on Tourism"
+            "value": "2019: COVID-19 Impact"
           }
         }
       }

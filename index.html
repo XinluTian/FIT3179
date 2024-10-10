@@ -1,68 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vega Visualization</title>
-  <link rel="stylesheet" href="styles.css"> <!-- 引用 CSS 文件 -->
-  
-  <!-- 引入 Vega, Vega-Lite, 和 Vega-Embed 库 -->
-  <script src="https://cdn.jsdelivr.net/npm/vega@5.21.0"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.8.0"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.20.0"></script>
+    <!-- Import Vega & Vega-Lite (CDN) -->
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.1"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.18.2"></script>
 
-  <style>
-    /* 创建一个包含图表和注释的容器，使用 flex 布局 */
-    .chart-with-annotation {
-      display: flex;
-      justify-content: space-between; /* 图表和注释之间留出空间 */
-      align-items: flex-start; /* 顶部对齐图表和注释 */
-    }
+    <!-- Import pure.css for layout -->
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
 
-    .vega-container {
-      width: 70%; /* 图表宽度为页面的 70% */
-    }
+    <!-- Link for custom font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
 
-    .annotation {
-      position: absolute; /* 使用绝对定位 */
-      bottom: 350px; /* 注释距离底部 10px */
-      right: 350px; /* 注释距离右侧 10px */
-      background-color: rgba(255, 255, 255, 0.8); /* 为注释添加半透明背景，确保在图表上清晰显示 */
-      padding: 10px; /* 注释内容的内边距 */
-      border-radius: 5px; /* 添加圆角边框 */
-      box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3); /* 添加轻微阴影 */
-    }
-  </style>
+    <!-- Custom CSS file -->
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
+
 <body>
 
-  <h1>Homework10</h1>
+    <div class="page">
+        <!-- Title Section -->
+        <div class="pure-g">
+            <div class="pure-u-1-1">
+                <h1 id="c-align">Tourism Dynamics and Economic Impact in Australia</h1>
+                <p id="c-align">This dashboard explores tourism consumption and its economic impact across Australian states from 1998 to 2023. It compares pre- and post-pandemic changes in tourist numbers and spending, highlighting tourism’s recovery and its influence on regional economies.</p>
+            </div>
+        </div>
 
-  <!-- 包含图表和注释的容器 -->
-  <div class="chart-with-annotation">
-    <!-- 图表容器 -->
-    <div class="vega-container">
-      <div id="vega-chart1"></div>
+        <!-- Visualization 1: International Tourism in Australia -->
+        <div class="pure-g">
+            <div class="pure-u-2-3">
+                <div id="vis1" class="vega-container"></div>
+            </div>
+            <div class="pure-u-1-4">
+                <div class="description description-right">
+                    <h2> Evolution of <span class="orange_text">International Tourism</span> in Australia</h2> 
+                    <p>
+                        In the <strong><span class="orange_text">1990s</span></strong>, the main tourist sources were the United States, the United Kingdom, and Japan. By the <span class="orange_text"><strong>2000s</strong></span>, China became a significant contributor to Australia’s tourism, driven by its growing economy and middle class. The <span class="orange_text"><strong>2008 Global Financial Crisis</strong></span> caused a temporary dip, particularly in Western markets, but the Asia-Pacific region remained strong.
+                    </p>
+
+                    <p>
+                        Tourism peaked in the <span class="orange_text"><strong>late 2010s</strong></span>, with record numbers from China and Southeast Asia. However, the <span class="orange_text"><strong>COVID-19 pandemic in 2020</strong></span> led to a near-total halt in international travel, as reflected by lighter shades. The industry started recovering in <span class="orange_text"><strong>2022</strong></span>, though numbers remain below pre-pandemic levels.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Visualization 2: Tourism to Australia -->
+        <div class="pure-g">
+            <div class="pure-u-1-3">
+                <div class="description description-left">
+                    <h2> Tourism to Australia: <span class="orange_text">COVID-19</span> Impact</h2>
+                    <p>
+                        From <span class="orange_text"><strong>1991 to 2019</strong></span>, international tourism to Australia experienced <span class="orange_text"><strong>steady growth</strong></span>, peaking at over 20 million visitors. However, the COVID-19 pandemic in 2020 led to an abrupt halt, dramatically reducing tourist numbers.
+                    </p>
+                    <p>
+                        The red line highlights the onset of the pandemic, which caused a near-total collapse in travel. Though recovery efforts began in <span class="orange_text"><strong>2021</strong></span>, visitor numbers remain significantly below pre-pandemic levels. This sharp contrast underscores the profound effect of the pandemic on <span class="orange_text"><strong>Australia’s tourism industry</strong></span>, marking one of the most significant downturns in decades.
+                    </p>
+                </div>
+            </div>
+            <div class="pure-u-2-3">
+                <div id="vis2" class="vega-container"></div>
+            </div>
+        </div>
+
+        <!-- Visualization 3: Travel Purposes -->
+        <div class="pure-g">
+            <div class="pure-u-2-3">
+                <div id="vis3" class="vega-container"></div>
+            </div>
+            <div class="pure-u-1-3">
+                <div class="description description-right">
+                    <h2><span class="orange_text">Australian Tourism</span> – Travel Purposes</h2>
+                    <p>
+                        This map highlights the different reasons people traveled to Australia from <span class="orange_text"><strong>1998 to 2016</strong></span>. Larger circles indicate a higher number of trips. Popular destinations like <span class="orange_text"><strong>Sydney</strong></span>, <span class="orange_text"><strong>Melbourne</strong></span>, and <span class="orange_text"><strong>Brisbane</strong></span> attracted a mix of holidaymakers, business travelers, and other visitors. 
+                    </p>
+                    <p>
+                        You can explore how these patterns change over time using the <span class="orange_text"><strong>year selector</strong></span> and observe how different regions attract visitors for different purposes. Discover Australia’s top spots for business trips, vacations, and more across the years.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Visualization 4: Tourism's Contribution to Australia's Economy by State -->
+        <div class="pure-g">
+            <div class="pure-u-1-3">
+                <div class="description description-left">
+                    <h2>Tourism's Contribution to Australia's Economy by State</h2>
+                    <p>
+                        In 2022-23, tourism played a crucial role in several Australian states, especially in regions like Queensland and Tasmania, where it made up a significant portion of the economy. 
+                    </p>
+
+                    <p>
+                        This chart shows how tourism, represented in pink and green, contributed both directly and indirectly to each state’s economic activities. In comparison, states like Western Australia and the Northern Territory relied more heavily on industries such as mining and construction, with a smaller portion attributed to tourism.
+                    </p>
+                    
+                    <p>
+                        The chart clearly illustrates how the tourism industry interacts with other key sectors, shaping Australia's economic landscape across regions.
+                    </p>
+                </div>
+            </div>
+            <div class="pure-u-2-3">
+                <div id="vis4" class="vega-container"></div>
+            </div>
+        </div>
+
+        <!-- Visualization 5: line chart  -->
+        <div class="pure-g">
+            <div class="pure-u-1-1">
+                <div id="vis5" class="vega-container"></div>
+                <div class="chart-description">
+                    <p>
+                        Between 2007 and 2023, tourism consumption in Australian states experienced significant shifts. By using the interactive slider, you can select specific time periods to view how tourism spending has changed year by year, or focus on average consumption over a selected period. 
+                    </p>
+
+                    <p>
+                        For example, selecting 2010-2015 shows the average tourism consumption steadily increasing across most states, with New South Wales and Queensland consistently leading in total spending. The COVID-19 pandemic in 2020 marks a sharp decline, but the chart allows you to easily compare recovery trends across states.                     </p>
+                </div>
+            </div>
+            <div class="pure-u-1-2">
+                <div class="description description-right">
+                </div>
+            </div>
+        </div>
     </div>
-
-    <!-- 注释容器，显示在图表右侧 -->
-    <div class="annotation">
-      <p><strong>Note:</strong> Western Australia has the highest mining share.</p>
+    
+    <div class="note-container">
+        <div class="note">
+            <strong>Note:</strong> Please try interacting with the chart by sliding.
+        </div>
     </div>
-  </div>
+    
 
-  <!-- 第二个可视化容器 -->
-  <div class="vega-container2">
-    <div id="vega-chart2"></div>
-  </div>
+    <!-- Vega Embeds -->
+    <script type="text/javascript">
+        var specVis1 = "js/International_tourism_map_new.vg.json";
+        var specVis2 = "js/area_chart.vg.json";
+        var specVis3 = "js/australia_tourism_map.vg.json"; 
+        var specVis4 = "js/normalised_stacked_bar.vg.json";
+        var specVis5 = "js/line_chart_Total_consumption.vg.json";
 
-  <script>
-    const spec1 = "js/normalised_stacked_bar.vg.json";
-    const spec2 = "js/empty_data_map.vg.json";
-  
-    vegaEmbed('#vega-chart1', spec1);
-    vegaEmbed('#vega-chart2', spec2);
-  </script>  
+        vegaEmbed('#vis1', specVis1, { "actions": false }).catch(console.error);
+        vegaEmbed('#vis2', specVis2, { "actions": false }).catch(console.error);
+        vegaEmbed('#vis3', specVis3, { "actions": false }).catch(console.error);
+        vegaEmbed('#vis4', specVis4, { "actions": false }).catch(console.error);
+        vegaEmbed('#vis5', specVis5, { "actions": false }).catch(console.error);
+    </script>
 
 </body>
+
 </html>
