@@ -22,7 +22,7 @@
   "layer": [
     {
       "data": {
-        "url": "https://raw.githubusercontent.com/olu-git/assgn2/main/js/world_topo.geo.json",
+        "url": "https://raw.githubusercontent.com/XinluTian/FIT3179/refs/heads/main/js/world_topo.geo.json",
         "format": {
           "type": "topojson",
           "feature": "world.geo"
@@ -55,7 +55,7 @@
           "lookup": "LOCATION",
           "from": {
             "data": {
-              "url": "https://raw.githubusercontent.com/olu-git/assgn2/main/js/world_topo.geo.json",
+              "url": "https://raw.githubusercontent.com/XinluTian/FIT3179/refs/heads/main/js/world_topo.geo.json",
               "format": {
                 "type": "topojson",
                 "feature": "world.geo"
