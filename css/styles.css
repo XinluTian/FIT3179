@@ -102,7 +102,7 @@ body {
 .note {
 	position: relative;
     top: -550px;
-	right: 100px;
+	right: 70px;
     grid-column: 10;  /* 将注释框放在第二列 */
     background-color: white; 
     padding: 10px 15px; 
